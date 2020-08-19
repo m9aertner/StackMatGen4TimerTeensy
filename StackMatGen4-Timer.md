@@ -2,14 +2,15 @@
 
 ## Overview
 
-1200 baud, 8N1, 833µs per bit, 10 bytes, 10 bits per byte, 112ms packet period, 75ms per Packet, 37ms inter-packet gap, around 9 packets are sent per second.
+1200 baud, 8N1, 833µs per bit, 10 bytes, 10 bits per byte, 112ms packet period, 75ms per packet, 37ms inter-packet gap, around 9 packets are sent per second.
 
-Stackmat output is active-high with about 2,7V (depending on battery level, probably), through 2,5mm TRS connector.
+Stackmat output is active-high with about 2,7V (depending on the 2xAA battery level, probably), through its 2,5mm TRS connector.
  - T - Tip carries the signal.
- - R - Ring is not connected. I have read that the StackMat device outputs the signal on both left and right channels, I cannot confirm that for my unit.
+ - R - Ring is not connected.
+   - I have read that the StackMat device outputs the signal on both left and right channels, I cannot confirm that for my unit.
  - S - Sleeve is Ground.
 
-I was able to connect the StackMat through a 2,5mm-to-3,5mm adaptor cable to a [Teensy LC](https://www.pjrc.com/store/teensylc.html "Teensy LC") Pin 9 Rx2 and Ground with no further circuitry. The Teensy is running an 3V3 a well so the signal matches nicely. I found it is possible to use the built-in Teensy serial engine out of the box. No hand-crafted bit-decoding required (certainly _possible_, but not _required_). The key is to specify **inverse encoding** so that acive high voltage is interpreted as "space" by the serial decoder engine and zero Volts as "mark". The Teensy's **hardware decoder** provides sophisticated sampling and error checking, which makes reception resilient.
+I was able to connect the StackMat through a 2,5mm-to-3,5mm adaptor cable to a [Teensy LC](https://www.pjrc.com/store/teensylc.html "Teensy LC") Pin 9 Rx2 and Ground with no further circuitry. The Teensy is running on 3V3 a well so the signal matches nicely. I found it is possible to use the built-in Teensy serial engine out of the box. No hand-crafted bit-decoding required (certainly _possible_, but not _required_). The key is to specify **inverse encoding** so that acive high voltage is interpreted as "space" by the serial decoder engine and zero Volts as "mark". The Teensy's **hardware decoder** provides sophisticated sampling and error checking, which makes reception resilient.
 
 ![Teensy LC Pinout](images/teensylc_front_small.png "https://www.pjrc.com/teensy/teensylc_front_small.jpg")
 
