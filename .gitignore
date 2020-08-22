@@ -5,3 +5,5 @@ images/*.jpg
 KiCAD/*-cache.lib
 KiCAD/*.html
 KiCAD/*.sch-bak
+
+.vsteensy/build

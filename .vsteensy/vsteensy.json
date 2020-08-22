@@ -1,0 +1,48 @@
+{
+  "version": "1",
+  "target": "vsCode",
+  "buildSystem": "makefile",
+  "debugSupport": "none",
+  "configurations": [
+    {
+      "name": "default",
+      "guid": "07eeec7b-3a57-45f5-9010-aa4cb4cf8bc8",
+      "setupType": "quick",
+      "coreBase": "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr",
+      "compilerBase": "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\arm",
+      "makefileExtension": null,
+      "copyCore": false,
+      "sharedLibraries": [],
+      "projectLibraries": [],
+      "board": {
+        "name": "Teensy LC",
+        "options": {
+          "USB Type": "Serial",
+          "CPU Speed": "48 MHz",
+          "Optimize": "Smallest Code",
+          "Keyboard Layout": "German"
+        }
+      }
+    },
+    {
+      "name": "Testdummy",
+      "guid": "30f32fbe-70dc-4f5e-8697-2959b4ca1bb5",
+      "setupType": "quick",
+      "coreBase": "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr",
+      "compilerBase": "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\arm",
+      "makefileExtension": null,
+      "copyCore": false,
+      "sharedLibraries": [],
+      "projectLibraries": [],
+      "board": {
+        "name": "Teensy 4.1",
+        "options": {
+          "USB Type": "Serial",
+          "CPU Speed": "600 MHz",
+          "Optimize": "Faster",
+          "Keyboard Layout": "US English"
+        }
+      }
+    }
+  ]
+}
