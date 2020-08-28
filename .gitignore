@@ -1,3 +1,7 @@
 images/*.JPG
 images/*.pdn
 images/*.jpg
+
+KiCAD/*-cache.lib
+KiCAD/*.html
+KiCAD/*.sch-bak
